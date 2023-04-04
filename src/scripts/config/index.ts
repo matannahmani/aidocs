@@ -1,3 +1,2 @@
-// barrel file for config module
-export * from './config.js';
-export * from './lang.js';
+export * from './config';
+export * from './lang';

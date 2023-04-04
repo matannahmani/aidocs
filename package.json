@@ -39,6 +39,7 @@
   "author": "Matan Nahmani",
   "license": "Apache-2.0",
   "dependencies": {
+    "@dqbd/tiktoken": "^1.0.2",
     "tslib": "~2.4"
   },
   "volta": {

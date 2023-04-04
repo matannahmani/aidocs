@@ -31,6 +31,6 @@ const configLangZodSchema = z.enum(
 type ConfigLangOptions = z.infer<typeof configLangZodSchema>;
 
 export {
-    configLangZodSchema,
-    ConfigLangOptions
-}
+    configLangZodSchema
+};
+export type { ConfigLangOptions };
