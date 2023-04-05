@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { readFile } from "fs";
-import type { ConfigOptions} from "./config";
-import { configSchema } from "./config";
+import type { ConfigOptions} from "./config.js";
+import { configName, configSchema } from "./config.js";
 
 /**
  * @description loads the configuration from the config file at project root.
@@ -9,7 +9,7 @@ import { configSchema } from "./config";
  */
 async function loadConfig(): Promise<ConfigOptions> {
     const config = await new Promise<unknown>((resolve, reject) => {
-        readFile("./aidocs.config.json", (err, data) => {
+        readFile(`./${configName}`, (err, data) => {
             if (err) {
                 reject(err);
             } else {

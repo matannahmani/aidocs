@@ -1,0 +1,16 @@
+{
+    "apiKey": "",
+    "files": {
+        "folder": {
+            "exclude": [],
+            "paths": [],
+            "recursive": true
+        },
+        "files": {
+            "patterns": [],
+            "exclude": []
+        }
+    },
+    "locale": "en",
+    "output": "aidocs/"
+}

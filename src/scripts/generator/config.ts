@@ -1,5 +1,6 @@
 import { writeFile } from "fs"
-import { configSchema, type ConfigOptions } from "../config/config.js"
+import { configName, type ConfigOptions } from "../config/config.js"
+import { log } from "@clack/prompts"
 
 const baseCFG: ConfigOptions = {
     'apiKey': '',
@@ -24,7 +25,8 @@ const baseCFG: ConfigOptions = {
  */
 const writeBaseConfig = (): void => {
     const baseCFGStr = JSON.stringify(baseCFG, null, 4)
-    writeFile('aidocs.json', baseCFGStr, (err) => {
+    log.info('Writing base configuration to project root...')
+    writeFile(configName, baseCFGStr, (err) => {
         if (err) {
             throw err
         }

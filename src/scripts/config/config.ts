@@ -39,8 +39,11 @@ const configSchema = z.object({
      */
 type ConfigOptions = z.infer<typeof configSchema>;
 
+const configName = 'aidocs.config.json';
+
 export {
     configSchema,
+    configName,
 }
 
 export type {
